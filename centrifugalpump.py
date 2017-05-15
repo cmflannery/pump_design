@@ -80,7 +80,7 @@ class Pump(object):
             self.density = rocket.density_LNG
         elif working_fluid == "water":
             self.density = rocket.density_water
-        self.rpm = 16000
+        self.rpm = 20000
         self.press_out = 12.41056 #MPa
         self.flow_q = 0.04 #m3/s
 
