@@ -81,13 +81,13 @@ class Pump(object):
         elif working_fluid == "water":
             self.density = rocket.density_water
         self.rpm = 16000
-        self.press_out = 3.0 #MPa
+        self.press_out = 12.41056 #MPa
         self.flow_q = 0.04 #m3/s
 
         self.head_total = self.press_out / self.density / rocket.g * (10 ** 6)
 
-        self.press_in = 0.1 #MPa
-        self.head_loss = 3 #m
+        self.press_in = 2.06843 #MPa
+        self.head_loss = 10 #m
         self.head_v = 1.046862 #m
         self.height_pump = 0 #m
         """ Impeller size """
