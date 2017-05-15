@@ -1,3 +1,4 @@
+__NOTE: This is a clone of [CentrifugalPump_DesignTool](https://github.com/ina111/CentrifugalPump_DesignTool) with modifications for the Rocket Propulsion Laboratory__
 ## Centrifugal　Pump　Design　Tool
 Centrifugal Pump design tool with EA/LOX engine
 Only use for Sigle-stage certrifugal pump.
@@ -5,40 +6,30 @@ It is limited the use of approximate culcuration.
 This script is New BSD License.
 cf. Basic Design on Pumps by Hirohisa Takeda
 
-## 超小型ロケット用遠心ポンプの設計ツール
-単段の遠心ポンプの設計ツールです。超小型ロケットエンジン用を想定しているものです。
-一般産業用の遠心ポンプの設計ではStepanoffの設計法が有名で一般的ですが、
-ここでは電業社機械製作所の論文を参考に豊倉の設計法を採用しています。
-修正BSDライセンスです。使用に関して一切の責任を負いかねます。
+## Design tool for centrifugal pump for microminiature rocket
+It is a single stage centrifugal pump design tool. It is intended for ultra-small rocket engines. In the design of centrifugal pumps for general industries, Stepanoff 's design method is famous and common, but here we adopt Toyakura' s design method with reference to the paper by the Electric Works Machinery Works. It is a modified BSD license. We can not assume any responsibility regarding use.
 
-### 使用
-pythonを使用しています。3次方程式の解を簡単にするためにscipyのfsolveを使用しました。
-    $ python centrifugalpump.py
-で出力されます。パラメータ変更ははソースファイルをいじって下さい。
+### use
+I am using python. I used scipy's fsolve to simplify the solution of cubic equation. It is output in <code>$ python centrifugalpump.py</code>. Please change the source file for parameter change.
 
-### 決めるべき設計パラメータ
-- ロケット推力、比推力、O/F
-- ポンプ回転数
-- 揚程H
-- 流量Q
-- 比速度Ns
-- 羽根出口角beta2
-- ポンプ効率
-- 圧力低下係数λ
-- 出口径D2
-- 羽根枚数Z
+Design parameters to decide
 
-### 参考文献
-+ 武田祐久,"ポンプ設計の基礎",電業社機械,Vol.29,No.2,(2005),pp.7-11
-http://www.dmw.co.jp/technical/pdf/no57.pdf
-+ Stepanoff, A. J., “Centrifugal and Axial Flow Pumps(2nd Ed.),” John Wiley & Sons Inc., (1957).
+- Rocket thrust, specific thrust, O / F
+- Pump rotation speed
+- Head H
+- Flow rate Q
+- Specific speed Ns
+- Feather exit angle beta 2
+- Pump efficiency
+- The pressure drop coefficient λ
+- Outlet diameter D2
+- Number of vanes Z
+- References
 
-+ 豊倉富太郎，武田裕久，“タ－ボポンプの新しい設計線図について”，タ－ボ機械第 32 回講演会，(1994), pp. 37-42.
-
-+ 大嶋政夫,“遠心ポンプ羽根車に対するステパノフによる設計定数に関する一考察”，タ－ボ機械,Vol. 29, (2001), pp. 221-227
-
-+ 渡辺啓悦,　吉田義樹,　"ロケットエンジン用ターボポンプ主羽根車小径化に関する検討",JAXAリポジトリ
-http://repository.tksc.jaxa.jp/dr/prc/japan/contents/AA0063736000/63736000.pdf
-
-+ 青木宏, 志村隆, 藁科彰吾, 上條謙二郎,"極低温上段エンジン用ターボポンプの設計および開発", 日本航空学会論文集,Vol.53, No.617,(2005), pp. 257-265
-https://www.jstage.jst.go.jp/article/jjsass/53/617/53_617_257/_pdf
+## References
++ Yuki Takeda, "Fundamentals of pump design", Electric Works Machinery Machine, Vol. 29, No. 2, (2005), pp. 7 - 11 http://www.dmw.co.jp/technical/pdf/no 57. pdf
++ Stepanoff, A. J., "Centrifugal and Axial Flow Pumps (2nd Ed.)," John Wiley & Sons Inc., (1957).
++ Tomitaka Tomitaro, Takeda Yuhisa, "About the New Design Diagram of Tarbopump", Tarbo Machine No. 32 Lecture, (1994), pp. 37-42.
++ Masao Oshima, "A consideration on design constants by Stefanov for centrifugal pump impellers", Tarbo Machine, Vol. 29, (2001), pp. 221-227
++ Watanabe Keiyoshi, Yoshida Yoshiki, "Study on turbo pump main impeller diameter reduction for rocket engines", JAXA repository http://repository.tksc.jaxa.jp/dr/prc/japan/contents/AA0063736000/63736000.pdf
++ Hiroshi Aoki, Takashi Shimura, Shogo Shoji, Kenjiro Kamijo, "Design and development of turbo pump for cryogenic upper stage engine", papers of Japan Airlines Association, Vol. 53, No. 617, (2005), pp. 257-265 https : //www.jstage.jst.go.jp/article/jjsass/53/617/53_617_257/_pdf
